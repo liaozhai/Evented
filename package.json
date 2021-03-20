@@ -1,0 +1,16 @@
+{
+  "name": "@liaozhai/evented",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaozhai/Evented.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liaozhai/Evented/issues"
+  },
+  "homepage": "https://github.com/liaozhai/Evented#readme"
+}
