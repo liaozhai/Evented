@@ -1,5 +1,5 @@
 export default class Evented implements EventTarget {
-    private listeners = {};
+    private listeners:{ [type:string]:EventListener[] } = {};
     addEventListener(type: string, callback: EventListener): void {
         if(!(type in this.listeners)) {
             this.listeners[type] = [];
