@@ -1,4 +1,4 @@
-export default class Evented implements EventTarget {
+export default class Evented extends EventTarget {
     private listeners:{ [type:string]:EventListener[] } = {};
     addEventListener(type: string, callback: EventListener): void {
         if(!(type in this.listeners)) {
