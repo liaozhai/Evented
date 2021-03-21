@@ -32,12 +32,9 @@
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
 
-    var Evented = /** @class */ (function (_super) {
-        __extends(Evented, _super);
+    var Evented = /** @class */ (function () {
         function Evented() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            _this.listeners = {};
-            return _this;
+            this.listeners = {};
         }
         Evented.prototype.addEventListener = function (type, callback) {
             if (!(type in this.listeners)) {
@@ -82,7 +79,7 @@
             return true;
         };
         return Evented;
-    }(EventTarget));
+    }());
 
     var Application = /** @class */ (function (_super) {
         __extends(Application, _super);
