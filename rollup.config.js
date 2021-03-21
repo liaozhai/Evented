@@ -1,4 +1,4 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 
 export default [
     {        
@@ -10,7 +10,7 @@ export default [
             name: 'Example'
         },
         plugins: [
-            typescript({lib: ["es5", "es6", "dom"], target: "es5"})
+            typescript(),
         ],
     },
 ];
