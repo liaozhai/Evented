@@ -10,8 +10,5 @@ class Application extends Evented {
 
 window.addEventListener('load', () => {
     const app = new Application();
-    app.on('run', () => {
-        console.log('Done!');
-    });
-    app.run();
+    app.on('run', () => console.log('Done!')).run();
 });

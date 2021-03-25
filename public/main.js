@@ -95,10 +95,7 @@
     }(Evented));
     window.addEventListener('load', function () {
         var app = new Application();
-        app.on('run', function () {
-            console.log('Done!');
-        });
-        app.run();
+        app.on('run', function () { return console.log('Done!'); }).run();
     });
 
 }());
