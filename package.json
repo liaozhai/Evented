@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liaozhai/Evented.git"
