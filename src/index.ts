@@ -1,12 +1,12 @@
 export default class Evented implements EventTarget {
     private listeners:{ [type:string]:EventListener[] } = {};
-    addEventListener(type: string, callback: EventListener): void {
+    addEventListener(type: string, callback: EventListener) {
         if(!(type in this.listeners)) {
             this.listeners[type] = [];
         }
         this.listeners[type].push(callback);
     }
-    on(type: string, callback: EventListener): Evented {
+    on(type: string, callback: EventListener): this {
         this.addEventListener(type, callback);
         return this;
     }
@@ -22,7 +22,7 @@ export default class Evented implements EventTarget {
             }
         }
     }
-    off(type: string, callback: EventListener): Evented {
+    off(type: string, callback: EventListener): this {
         this.removeEventListener(type, callback);
         return this;
     }
