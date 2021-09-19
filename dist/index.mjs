@@ -1,5 +1,3 @@
-'use strict';
-
 var Evented = /** @class */ (function () {
     function Evented() {
         this.listeners = {};
@@ -49,5 +47,5 @@ var Evented = /** @class */ (function () {
     return Evented;
 }());
 
-module.exports = Evented;
-//# sourceMappingURL=main.js.map
+export { Evented as default };
+//# sourceMappingURL=index.mjs.map

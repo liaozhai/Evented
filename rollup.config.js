@@ -1,28 +1,16 @@
-import ts from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript';
 
-export default [
-    {        
-        input: 'example/index.ts',
-        output: { 
-            file: 'public/main.js',
-            format: 'iife',
-            sourcemap: true,
-            name: 'Example'
-        },
-        plugins: [
-            ts(),
-        ],
-    },
+export default [    
     {        
         input: 'src/index.ts',
         output: { 
-            file: 'dist/main.js',
-            format: 'cjs',
+            file: 'dist/index.mjs',
+            format: 'es',
             sourcemap: true,
             exports: 'auto',
         },
         plugins: [
-            ts(),
+            typescript({ tsconfig: './tsconfig.json'}),
         ],
     },
 ];
